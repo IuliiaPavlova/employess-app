@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
-// import axios from 'axios';
-// import reducer, { init } from './reducer';
 
 const GetEmployees = ({ employeesList, error, removeEmployee }) => {
   return (
