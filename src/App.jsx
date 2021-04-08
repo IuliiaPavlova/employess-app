@@ -3,10 +3,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import React, { useReducer } from 'react';
-import './App.css';
+// import './App.css';
 import axios from 'axios';
-import GetEmployees from './GetEmployees';
+import GetEmployees from './components/GetEmployees';
 import reducer, { init } from './reducer';
+import Spinner from './components/Spinner';
 
 const App = () => {
   // const { employeesList, error } = useReducer(reducer, initialState);
@@ -32,7 +33,7 @@ const App = () => {
     <main className='main'>
       {
         state.isLoading ? (
-          <h1>Loading...</h1>
+          <Spinner />
         )
           : state.employeesList.length || state.error ? (
             <GetEmployees
