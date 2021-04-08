@@ -7,7 +7,7 @@ import reducer, { initialState } from './reducer';
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const getEmployeesList = async () => {
-    const url = 'http://dummy.restapiexample.com/api/v1/employees';
+    const url = 'https://dummy.restapiexample.com/api/v1/employees';
     dispatch({ type: 'LOADING' });
     try {
       const response = await axios.get(url);
