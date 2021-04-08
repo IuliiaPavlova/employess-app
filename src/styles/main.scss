@@ -1,10 +1,48 @@
 @import './spinner.scss';
+@import './employeesList.scss';
+
+:root {
+  --background-color: #e4f5f2;
+  --dark-color: #4d4b4b;
+  --delete: #7e4e4e;
+  --light-color: #d4dddb;
+}
 
 body {
   margin: 0;
   padding: 0;
   font-weight: 400;
-  background: rgb(67, 68, 67);
-  color: darkgrey;
+  background: var(--background-color);
+  color: var(--dark-color);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+  position: relative;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
+header {
+  padding-top: 10rem;
+  line-height: 100px;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+.main {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  background-color: var(--dark-color);
+  color: var(--background-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  align-self: center;
+  border-radius: 8px;
 }

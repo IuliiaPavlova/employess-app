@@ -1,0 +1,28 @@
+.table {
+  width: 80%;
+  border-collapse: collapse;
+  padding: 10px;
+  overflow: hidden;
+  text-transform: uppercase;
+  td,
+  th {
+    border: 1 solid #ddd;
+    padding: 8px;
+  }
+  tr:nth-child(even) {
+    background-color: var(--light-color);
+  }
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--dark-color);
+    color: var(--background-color);
+  }
+  .delete-column {
+    text-align: right;
+  }
+  .delete:hover {
+    background-color: var(--delete);
+  }
+}

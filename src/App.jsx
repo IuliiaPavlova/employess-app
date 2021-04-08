@@ -3,18 +3,15 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import React, { useReducer } from 'react';
-// import './App.css';
 import axios from 'axios';
-import GetEmployees from './components/GetEmployees';
-import reducer, { init } from './reducer';
+import EmployeesTable from './components/EmployeesList';
 import Spinner from './components/Spinner';
+import reducer, { init } from './reducer';
 
 const App = () => {
-  // const { employeesList, error } = useReducer(reducer, initialState);
   const [state, dispatch] = useReducer(reducer, [], init);
-  const handleClick = async (e) => {
+  const getEmployeesList = async (e) => {
     const url = 'http://dummy.restapiexample.com/api/v1/employees';
-
     dispatch({ type: 'LOADING' });
     try {
       const response = await axios.get(url);
@@ -30,26 +27,25 @@ const App = () => {
     dispatch({ type: 'REMOVE', payload: id });
   };
   return (
-    <main className='main'>
-      {
+    <>
+      <header className='title'>Employees</header>
+      <main className='main'>
+        {
         state.isLoading ? (
           <Spinner />
         )
           : state.employeesList.length || state.error ? (
-            <GetEmployees
+            <EmployeesTable
               employeesList={state.employeesList}
               error={state.error}
               removeEmployee={removeEmployee}
             />
           )
             : (
-              <>
-                <h1>Employees</h1>
-                <button type='button' onClick={handleClick}>Get</button>
-              </>
-            )
+              <button className='btn' type='button' onClick={getEmployeesList}>Get</button>)
     }
-    </main>
+      </main>
+    </>
   );
 };
 

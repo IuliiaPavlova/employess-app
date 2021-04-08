@@ -26,5 +26,6 @@ module.exports = {
       component: false,
       html: false,
     }],
+    'react/prop-types': ['off'],
   },
 };
