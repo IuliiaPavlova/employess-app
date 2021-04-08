@@ -1,13 +1,13 @@
 .table {
-  width: 80%;
+  width: 65vw;
   border-collapse: collapse;
   padding: 10px;
-  overflow: hidden;
+  margin: 10px;
   text-transform: uppercase;
+  table-layout: fixed;
   td,
   th {
-    border: 1 solid #ddd;
-    padding: 8px;
+    padding: 10px;
   }
   tr:nth-child(even) {
     background-color: var(--light-color);

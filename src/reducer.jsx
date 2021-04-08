@@ -1,17 +1,7 @@
-/* eslint-disable no-unused-vars */
-
-// export const initialState = {
-//   employeesList: [],
-//   loading: false,
-//   error: '',
-// };
-
-export const init = (initialState) => {
-  return {
-    employeesList: [],
-    isLoading: false,
-    error: '',
-  };
+export const initialState = {
+  employeesList: [],
+  loading: false,
+  error: '',
 };
 
 const reducer = (state, action) => {

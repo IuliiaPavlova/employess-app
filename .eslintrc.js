@@ -22,10 +22,7 @@ module.exports = {
     quotes: [2, 'single', { avoidEscape: true }],
     'arrow-body-style': ['error', 'always'],
     'jsx-quotes': [2, 'prefer-single'],
-    'react/self-closing-comp': ['error', {
-      component: false,
-      html: false,
-    }],
-    'react/prop-types': ['off'],
+    'react/prop-types': 'off',
+    'no-nested-ternary': 'off',
   },
 };
