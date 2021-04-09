@@ -22,6 +22,6 @@ Can see deployed version [here](https://employees-app-technichal-assignment.netl
 - sass
 - eslint
 
-# Improvments
+# Improvements
 - refactor to implement useContext
 - refactor to Typescript
