@@ -21,3 +21,7 @@ Can see deployed version [here](https://employees-app-technichal-assignment.netl
 - axios
 - sass
 - eslint
+
+# Improvments
+- refactor to implement useContext
+- refactor to Typescript
